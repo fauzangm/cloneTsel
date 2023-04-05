@@ -7,6 +7,7 @@ import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +53,7 @@ class HomeView extends GetView<HomeController> {
             child: Column(
               children: [
                 Container(
-                  height: Get.height * 0.35,
+                  height: 300,
                   // color: Colors.amber,
                   child: LayoutBuilder(
                       builder: (context, constraint) => Column(
@@ -408,12 +409,15 @@ class HomeView extends GetView<HomeController> {
                   child: Container(
                     // color: Colors.purple,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 20),
+                      padding: const EdgeInsets.only(top: 20),
                       child: ListView(
                         children: [
-                          Text(
-                            "Kategori Paket",
-                            style: TextStyle(fontWeight: FontWeight.bold),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Text(
+                              "Kategori Paket",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 20),
@@ -475,33 +479,41 @@ class HomeView extends GetView<HomeController> {
                               ],
                             ),
                           ),
-                          Row(
-                            children: [
-                              SizedBox(width: 40.0),
-                              Text(
-                                "Internet",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                              SizedBox(width: 40.0),
-                              Text(
-                                "Telpon",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                              SizedBox(width: 45.0),
-                              Text(
-                                "SMS",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                              SizedBox(width: 40.0),
-                              Text(
-                                "Roaming",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(width: 40.0),
+                                Text(
+                                  "Internet",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 40.0),
+                                Text(
+                                  "Telpon",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 45.0),
+                                Text(
+                                  "SMS",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 40.0),
+                                Text(
+                                  "Roaming",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                              ],
+                            ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 20),
@@ -563,33 +575,84 @@ class HomeView extends GetView<HomeController> {
                               ],
                             ),
                           ),
-                          Row(
-                            children: [
-                              SizedBox(width: 40.0),
-                              Text(
-                                "Hiburan",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                              children: [
+                                SizedBox(width: 40.0),
+                                Text(
+                                  "Hiburan",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 35.0),
+                                Text(
+                                  "Unggulan",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 20.0),
+                                Text(
+                                  "Tersimpan",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                                SizedBox(width: 25.0),
+                                Text(
+                                  "Riwayat",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Terbaru dari Telkomsel",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16),
+                                ),
+                                Text(
+                                  "Lihat Semua",
+                                  style:
+                                      TextStyle(color: colorRed, fontSize: 14),
+                                )
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  ItemTerbaru(
+                                    image: "assets/logo/promo1.png",
+                                  ),
+                                  ItemTerbaru(
+                                    image: "assets/logo/promo2.jpeg",
+                                  ),
+                                ],
                               ),
-                              SizedBox(width: 30.0),
-                              Text(
-                                "Unggulan",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                              SizedBox(width: 30.0),
-                              Text(
-                                "Tersimpan",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                              SizedBox(width: 15.0),
-                              Text(
-                                "Riwayat",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 12),
-                              ),
-                            ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 30,
                           ),
                         ],
                       ),
@@ -601,6 +664,37 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home), backgroundColor: colorRed, label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.history),
+              backgroundColor: colorRed,
+              label: 'History'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.help), backgroundColor: colorRed, label: 'Help'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.mail), backgroundColor: colorRed, label: 'Mail'),
+        ],
+      ),
+    );
+  }
+}
+
+class ItemTerbaru extends StatelessWidget {
+  ItemTerbaru({Key? key, required this.image}) : super(key: key);
+
+  final String image;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(right: 20),
+      width: Get.width * 0.7,
+      height: 100,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
     );
   }
 }
