@@ -427,94 +427,99 @@ class MainScreen extends GetView<HomeController> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child:
-                                        Image.asset('assets/logo/internet.png'),
+                                Column(children: [
+                                  CircleAvatar(
+                                    radius: 25.0,
+                                    backgroundColor:
+                                        Color.fromARGB(255, 255, 250, 233),
+                                    child: Container(
+                                      width: 25,
+                                      height: 25,
+                                      child: Image.asset(
+                                          'assets/logo/internet.png'),
+                                    ),
+                                    // backgroundImage:
+                                    //     AssetImage('assets/logo/internet.png'),
                                   ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                  Text(
+                                    "Internet",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 12),
+                                  ),
+                                ]),
+                                SizedBox(width: 30.0),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child: Image.asset(
+                                            'assets/logo/phone.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Telpon",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/phone.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child:
+                                            Image.asset('assets/logo/chat.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "SMS",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/chat.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
-                                ),
-                                SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/plane.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child: Image.asset(
+                                            'assets/logo/plane.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Roaming",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                SizedBox(width: Get.width * 0.1),
-                                Text(
-                                  "Internet",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.1),
-                                Text(
-                                  "Telpon",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.12),
-                                Text(
-                                  "SMS",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.11),
-                                Text(
-                                  "Roaming",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
                               ],
                             ),
                           ),
@@ -523,93 +528,101 @@ class MainScreen extends GetView<HomeController> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/yt.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child:
+                                            Image.asset('assets/logo/yt.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Hiburan",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child:
-                                        Image.asset('assets/logo/defend.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child: Image.asset(
+                                            'assets/logo/defend.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Unggulan",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/sms.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child:
+                                            Image.asset('assets/logo/sms.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Tersimpan",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 ),
                                 SizedBox(width: 30.0),
-                                CircleAvatar(
-                                  radius: 25.0,
-                                  backgroundColor:
-                                      Color.fromARGB(255, 255, 250, 233),
-                                  child: Container(
-                                    width: 25,
-                                    height: 25,
-                                    child: Image.asset('assets/logo/load.png'),
-                                  ),
-                                  // backgroundImage:
-                                  //     AssetImage('assets/logo/internet.png'),
+                                Column(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 25.0,
+                                      backgroundColor:
+                                          Color.fromARGB(255, 255, 250, 233),
+                                      child: Container(
+                                        width: 25,
+                                        height: 25,
+                                        child:
+                                            Image.asset('assets/logo/load.png'),
+                                      ),
+                                      // backgroundImage:
+                                      //     AssetImage('assets/logo/internet.png'),
+                                    ),
+                                    Text(
+                                      "Riwayat",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 12),
+                                    ),
+                                  ],
                                 )
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 10),
-                            child: Row(
-                              children: [
-                                SizedBox(width: Get.width * 0.115),
-                                Text(
-                                  "Hiburan",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.07),
-                                Text(
-                                  "Unggulan",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.055),
-                                Text(
-                                  "Tersimpan",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
-                                SizedBox(width: Get.width * 0.07),
-                                Text(
-                                  "Riwayat",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 12),
-                                ),
                               ],
                             ),
                           ),
